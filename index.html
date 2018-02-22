@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Block[Chain] Alchemy Laboratory</title>
+</head>
+<body>
+<div align=center>
+<img src="images/BAlchemyLab.png" alt="Block&#91;Chain&#93; Alchemy Lab">
+</div>
+<h1>Block[Chain] Alchemy Lab Toolkit</h1>
+<h2>Motivation</h2>
+<p>
+The goal of the project "Block&#91;Chain&#93; Alchemy Lab" &#8210; creation
+of a toolkit for educational and research activities for chain-related tasks.
+This toolkit consist from programming framework and tools for modelling different
+blockchain and not only blockchain (indicated by the optionality of "chain")
+environments. Programming framework oriented to flexibility and possibility of
+changing different layers of architecture: consensus machinery, storage systems,
+transaction transport, smart contract implementation, etc.
+</p>
+<h2>Framework implemenation</h2>
+<img src="images/Python.jpg" align="right" vspace="5" hspace="5">
+<p>
+At present, the implemented <a href=https://github.com/BAlchemyLab/bal>Python framework</a>
+consists of classes:
+<ol>
+<li><a href=https://github.com/BAlchemyLab/bal/blob/master/BaseBlockChain.py>BaseBlockChain</a> with a basic blockchain functionality.</li>
+<li><a href=https://github.com/BAlchemyLab/bal/blob/master/POWBlockChain.py>POWBlockChain</a> &#8210; classical Proof Of Work (POW) blockchain with possibility of difficulty level setting.</li>
+<li><a href=https://github.com/BAlchemyLab/bal/blob/master/QuantumBlockChain.py>QuantumBlockChain</a> &#8210; blockchain with a Proof Of Infrastructure (POI) based on Quantum Key Distribution (QKD) technology.</li>
+</ol>
+</p>
+<p>
+The utiltity <a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain.py>blockchain.py</a> implements CLI for nodes running and <a href=https://github.com/BAlchemyLab/bal/wiki>REST API</a> for handling of requests to nodes. Options of this utility:
+</p>
+<pre>
+'-p', '--port', default=5000, type=int, help='port to listen on'
+'-k', '--kwport', default=55554, type=int, help='port keyworker to listen on'
+'-i', '--ip', default='127.0.0.1', help='ip keyworker to listen on'
+'-d', '--db', default='', help='db file, if not passed, then no persistance'
+'-v', '--variant', default='pow', help='variant of blockchain "pow[:difficulty]" or "quant"
+</pre>
+<p>
+,where:
+<ol>
+<li>pow[:difficulty] &#8210; POWBlockChain with possibility of "difficulty" setting (4 by default)</li>
+<li>quant &#8210; QuantumBlockChain</li>
+</ol>
+</p>
+<h2>Supporting tools</h2>
+<p><a href=https://github.com/BAlchemyLab/qnet>Supporting tools</a> implements functionality related to QKD channels. This tools may emulate QKD hardware, serve QKD "pools" and encrypt transport channels between nodes. They include:
+<ol>
+<li><a href=https://github.com/BAlchemyLab/qnet/tree/master/QKD_emulator>QKD_emulator</a> &#8210; software emulator for QKD (Quantum Key Distribution) hardware.</li>
+<li><a href=https://github.com/BAlchemyLab/qnet/tree/master/keyworker>keyworker</a> &#8210; server for handling of Quantum keys pool.</li>
+<li><a href=https://github.com/BAlchemyLab/qnet/tree/master/qcrypt>qcrypt</a> &#8210; quantum key codec.</li>
+</ol>
+</p>
+<h2>Virtual machines</h2>
+<p>
+Virtual machine images:
+<ol>
+<li><a href=http://naulinux.ru/static/stash/BAL/NauLinux-BAL-7.3.qcow2>KVM image</a> <a href=http://naulinux.ru/static/stash/BAL/NauLinux-BAL-7.3.qcow2.SHA256SUM>(SHA256SUM)</a></li>
+<li><a href=http://naulinux.ru/static/stash/BAL/NauLinux-BAL-7.3.ova>VirtualBox image</a> <a href=http://naulinux.ru/static/stash/BAL/NauLinux-BAL-7.3.ova.SHA256SUM>(SHA256SUM)</a></li>
+</ol>
+<p>
+<h2>More information</h2>
+<p>you may find in the project's <a href=https://github.com/BAlchemyLab/bal/wiki>Wiki</a>.
+</body>
+</html>
