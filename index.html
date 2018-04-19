@@ -23,9 +23,9 @@ transaction transport, smart contract implementation, etc.
 At present, the implemented <a href=https://www.giantbomb.com/mercurius/3005-22807>Python</a> <a href=https://github.com/BAlchemyLab/bal>framework</a>
 consists of classes:
 <ol>
-<li><a href=https://github.com/BAlchemyLab/bal/blob/master/BaseBlockChain.py>BaseBlockChain</a> with a basic blockchain functionality.</li>
-<li><a href=https://github.com/BAlchemyLab/bal/blob/master/POWBlockChain.py>POWBlockChain</a> &#8210; classical Proof Of Work (POW) blockchain with possibility of difficulty level setting.</li>
-<li><a href=https://github.com/BAlchemyLab/bal/blob/master/QuantumBlockChain.py>QuantumBlockChain</a> &#8210; blockchain with a Proof Of Infrastructure (POI) based on Quantum Key Distribution (QKD) technology. Basic implementations of HS<sup>3</sup>TN (High Speed Scalable Secure Transaction Network) tech. solutions:</li >
+<li><a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain-alchemy/BaseBlockChain.py>BaseBlockChain</a> with a basic blockchain functionality.</li>
+<li><a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain-alchemy/POWBlockChain.py>POWBlockChain</a> &#8210; classical Proof Of Work (POW) blockchain with possibility of difficulty level setting.</li>
+<li><a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain-alchemy/QuantumBlockChain.py>QuantumBlockChain</a> &#8210; blockchain with a Proof Of Infrastructure (POI) based on Quantum Key Distribution (QKD) technology. Basic implementations of HS<sup>3</sup>TN (High Speed Scalable Secure Transaction Network) tech. solutions:</li >
 <ol>
 <li>Transactions quantum encoding/decoding</li>
 <li>Quantum consensus</li>
@@ -33,12 +33,12 @@ consists of classes:
 </ol>
 </p>
 <p>
-The utiltity <a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain.py>blockchain.py</a> implements CLI for nodes running and <a href=https://github.com/BAlchemyLab/bal/wiki>REST API</a> for handling of requests to nodes.
+The utiltity <a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain-alchemy/blockchain.py>blockchain.py</a> implements CLI for nodes running and <a href=https://github.com/BAlchemyLab/bal/wiki>REST API</a> for handling of requests to nodes.
 </p>
 
 <h3>Mininet modelling</h3>
 <p>
-To model high-level networks, you can use extension classes for the popular SDN modeling system <a href=http://mininet.org>Mininet</a>. <a href=https://github.com/BAlchemyLab/bal/wiki/Mininet-network-modeling>Mininet's customization</a> for BAL classes <a=https://github.com/BAlchemyLab/bal/blob/master/balmn.py>balmn.py</a> adds several types of blockchain host nodes: Bitcoin, Etherium, modelling POW and Quantum nodes. You can run simulation networks using the standard <tt>mn</tt> utility or from Python programs.
+To model high-level networks, you can use extension classes for the popular SDN modeling system <a href=http://mininet.org>Mininet</a>. <a href=https://github.com/BAlchemyLab/bal/wiki/Mininet-network-modeling>Mininet's customization</a> for <a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain-alchemy/bcnode.py>BAL classes</a> <a href=https://github.com/BAlchemyLab/bal/blob/master/blockchain-alchemy/balmn.py>balmn.py</a> adds several types of blockchain host nodes: Bitcoin, Etherium, modelling POW and Quantum nodes. You can run simulation networks using the standard <tt>mn</tt> utility or from Python programs.
 </p>
 
 <h3>Supporting tools</h3>
